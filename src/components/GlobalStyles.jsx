@@ -828,8 +828,9 @@ body {
   margin-bottom: 25px;
 }
   .countdown {
-  display: flex;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
   margin-bottom: 25px;
 }
 
@@ -839,7 +840,7 @@ body {
   border-radius: 14px;
   padding: 14px 18px;
   text-align: center;
-  min-width: 70px;
+  min-width: 0px;
   backdrop-filter: blur(10px);
 }
 
@@ -848,12 +849,16 @@ body {
   font-weight: 700;
   display: block;
 }
-
 .time-box small {
   font-size: 11px;
   color: var(--gray);
+  min-width:0;
+  justify-content: center; 
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
   .progress-wrapper {
   width: 100%;
